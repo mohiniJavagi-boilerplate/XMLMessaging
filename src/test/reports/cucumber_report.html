@@ -53,7 +53,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Apr 27, 2020 01:39:12 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Apr 27, 2020 10:05:50 AM</span>
 				</a>
 			</li>
 			<li>
@@ -91,7 +91,7 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@postrequest</a></li>
+					<li><a href='#'>@getrequestpass</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -169,7 +169,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>7</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -188,69 +188,48 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>POST: Automated Demo Test</span>
-						<span class='test-time'>Apr 27, 2020 01:39:12 AM</span>
+						<span class='test-name'>GET: Automated Get Tests</span>
+						<span class='test-time'>Apr 27, 2020 10:05:50 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenariooutline node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 0m 15s+417ms</span>
+	<span class='duration right label'>0h 0m 6s+450ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
-		<span class="desc-text">POST: Test the Demo app</span>
+		<span class="desc-text">GET: Test the Get Request both Pass and Fail</span>
 	</div>
 	<ul class='steps'>
 		<li test-id='3' class='node scenario pass' status='pass'>
 			<div class='category-list'>
-				<span class='category label white-text'>@postrequest</span>
+				<span class='category label white-text'>@getrequestpass</span>
 			</div>
 			
 			<b>Scenario</b>
 			
-			<span class="bdd-step-name">POST: Test the Demo app</span>
+			<span class="bdd-step-name">GET: Test the Get Request both Pass and Fail</span>
 			
 				<ul class='steps'>
 					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given I want to set URL as "/search-xml" for test case "PostRequest"</span>
+						<span class="bdd-step-name">Given I want to set URL as "/search-xml" for test case "GetRequest Pass"</span>
 							<div class='pre'>pass :: Cucumber Hostname URL is :: https://www.yourholidays.com.au/search-xml</div>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='5' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I set header content type as "multipart/form-data"</span>
-							<div class='pre'>pass :: content type is :: multipart/form-data</div>
+						<span class="bdd-step-name">When I set header content type as "application/xml"</span>
+							<div class='pre'>pass :: content type is :: application/xml</div>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='6' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When I hit the API with requestbody with formdata "testdata/postRequest.txt" and request method is "POST"</span>
+						<span class="bdd-step-name">When I hit the API with requestbody "" and request method is "GET"</span>
 							<div class='pre'>pass :: Request successfully processed</div>
 							<div class='pre'>Response is :: <?xml version="1.0"?>
-<notes><note><id>pbk</id><to>prabhath</to><from>murali</from><heading/></note><note><id>kmk</id><to>ishaan</to><from>pratibha</from><heading/></note><note><id>3</id><to>Woking</to><from>London</from><heading/></note></notes></div>
+<notes><note><id>pbk</id><to>prabhath</to><from>murali</from><heading/></note><note><id>kmk</id><to>ishaan</to><from>pratibha</from><heading/></note></notes></div>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='7' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I try to verify the status code is "200"</span>
 							<div class='pre'>pass :: Status Code is :: 200</div>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='8' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And I try to verify the xml response value "id" is "3"</span>
-							<div class='pre'>Actual Value is  ::3</div>
-							<div class='pre'>Expected Value is  ::3</div>
-							<div class='pre'>pass id : Expected value : 3 mathches with Actual Value : 3</div>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='9' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And I try to verify the xml response value "to" is "Woking"</span>
-							<div class='pre'>Actual Value is  ::Woking</div>
-							<div class='pre'>Expected Value is  ::Woking</div>
-							<div class='pre'>pass to : Expected value : Woking mathches with Actual Value : Woking</div>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='10' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And I try to verify the xml response value "from" is "London"</span>
-							<div class='pre'>Actual Value is  ::London</div>
-							<div class='pre'>Expected Value is  ::London</div>
-							<div class='pre'>pass from : Expected value : London mathches with Actual Value : London</div>
 							<div class='pre'>passed</div>
 					</li>
 				</ul>
@@ -311,7 +290,7 @@
 				
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@postrequest</span>
+						<span class='category-name'>@getrequestpass</span>
 						<span class='category-status right'>
 							<span class='label pass'>1</span>
 						</span>
@@ -334,8 +313,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 27, 2020 01:39:12 AM</td>
-										<td class='linked' test-id='3'>POST: Automated Demo Test.POST: Test the Demo app.POST: Test the Demo app</td>
+										<td>Apr 27, 2020 10:05:50 AM</td>
+										<td class='linked' test-id='3'>GET: Automated Get Tests.GET: Test the Get Request both Pass and Fail.GET: Test the Get Request both Pass and Fail</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -376,25 +355,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>7</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 27, 2020 01:39:12 AM</div>
+					<div class='panel-lead'>Apr 27, 2020 10:05:50 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 27, 2020 01:39:28 AM</div>
+			 		<div class='panel-lead'>Apr 27, 2020 10:05:57 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>15,742ms</div>
+					<div class='panel-lead'>6,943ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -430,7 +409,7 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@postrequest</td>
+							<td>@getrequestpass</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -477,7 +456,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 7,
+				passGrandChild: 4,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,

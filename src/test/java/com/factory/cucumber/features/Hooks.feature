@@ -1,5 +1,5 @@
-#Author: Arjun
-Feature: GET: Hooks Demo
+#Author: Mohini Javagi
+Feature: GET: Hooks Test
   Description: GET: purpose of this feature is to test demo Hooks.
 
   @hooks

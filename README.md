@@ -8,12 +8,6 @@ I have used following URL for dummy `POST`, `GET` and `PUT` requests:
 https://reqres.in/
 ## Table of Contents (Optional)
 
-- [Preconditions](#Preconditions)
-- [MAVEN_Dependencies](#MAVEN_Dependencies)
-- [SetUp](#SetUp)
-- [Add_features_and_respective_step_definitions](#Add_features_and_respective_step_definitions)
-- [Support](#Support)
-
 ---
 
 ## Preconditions
@@ -138,8 +132,8 @@ public class RunCucumberTest {
 ```
 ## Add_features_and_respective_step_definitions
 ```feature
-#Author: Arjun
-Feature: GET: Automated Demo Tests
+#Author: Mohini Javagi
+Feature: GET: Automated XML Messaging Tests
   Description: GET: purpose of this feature is to test some demo app.
 
   @get
@@ -151,14 +145,6 @@ Feature: GET: Automated Demo Tests
 
     Examples: 
       | TestName  | URL               | ContentType      | RequestBody | RequestMethod | StatusCode |
-      | Demo test | /api/users?page=2 | application/json |             | GET           |        200 |
+      | XML Test | search-xml | application/xml |             | GET           |        200 |
 ```
-
-## Support
-
-Reach out to me at one of the following places!
-
-- FaceBook at <a href="https://www.facebook.com/chinna.mir.3" target="_blank">`arjun`</a>
-- Twitter at <a href="https://twitter.com/arjun436" target="_blank">`@arjun436`</a>
-
 ---

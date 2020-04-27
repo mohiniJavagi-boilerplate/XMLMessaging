@@ -1,71 +1,56 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("DemoFeaturePost.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("GetRequest.feature");
 formatter.feature({
   "comments": [
     {
       "line": 1,
-      "value": "#Author: Arjun"
+      "value": "#Author: Mohini Javagi"
     }
   ],
   "line": 2,
-  "name": "POST: Automated Demo Test",
-  "description": "Description: POST: The purpose of this feature is to test some demo app.",
-  "id": "post:-automated-demo-test",
+  "name": "GET: Automated Get Tests",
+  "description": "Description: GET: purpose of this feature is to test Get request.",
+  "id": "get:-automated-get-tests",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "line": 35,
-  "name": "POST: Test the Demo app",
+  "line": 6,
+  "name": "GET: Test the Get Request both Pass and Fail",
   "description": "",
-  "id": "post:-automated-demo-test;post:-test-the-demo-app",
+  "id": "get:-automated-get-tests;get:-test-the-get-request-both-pass-and-fail",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 34,
-      "name": "@postrequest"
+      "line": 5,
+      "name": "@getrequestpass"
     }
   ]
 });
 formatter.step({
-  "line": 36,
+  "line": 7,
   "name": "I want to set URL as \"\u003cURL\u003e\" for test case \"\u003cTestName\u003e\"",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 37,
+  "line": 8,
   "name": "I set header content type as \"\u003cContentType\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 38,
-  "name": "I hit the API with requestbody with formdata \"\u003cRequestBody\u003e\" and request method is \"\u003cRequestMethod\u003e\"",
+  "line": 9,
+  "name": "I hit the API with requestbody \"\u003cRequestBody\u003e\" and request method is \"\u003cRequestMethod\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 39,
+  "line": 10,
   "name": "I try to verify the status code is \"\u003cStatusCode\u003e\"",
   "keyword": "Then "
 });
-formatter.step({
-  "line": 40,
-  "name": "I try to verify the xml response value \"id\" is \"3\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 41,
-  "name": "I try to verify the xml response value \"to\" is \"Woking\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 42,
-  "name": "I try to verify the xml response value \"from\" is \"London\"",
-  "keyword": "And "
-});
 formatter.examples({
-  "line": 44,
+  "line": 12,
   "name": "",
   "description": "",
-  "id": "post:-automated-demo-test;post:-test-the-demo-app;",
+  "id": "get:-automated-get-tests;get:-test-the-get-request-both-pass-and-fail;",
   "rows": [
     {
       "cells": [
@@ -76,53 +61,53 @@ formatter.examples({
         "RequestMethod",
         "StatusCode"
       ],
-      "line": 45,
-      "id": "post:-automated-demo-test;post:-test-the-demo-app;;1"
+      "line": 13,
+      "id": "get:-automated-get-tests;get:-test-the-get-request-both-pass-and-fail;;1"
     },
     {
       "cells": [
-        "PostRequest",
+        "GetRequest Pass",
         "/search-xml",
-        "multipart/form-data",
-        "testdata/postRequest.txt",
-        "POST",
+        "application/xml",
+        "",
+        "GET",
         "200"
       ],
-      "line": 46,
-      "id": "post:-automated-demo-test;post:-test-the-demo-app;;2"
+      "line": 14,
+      "id": "get:-automated-get-tests;get:-test-the-get-request-both-pass-and-fail;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 33163920,
+  "duration": 1480621,
   "status": "passed"
 });
 formatter.before({
-  "duration": 1195236,
+  "duration": 33362,
   "status": "passed"
 });
 formatter.before({
-  "duration": 55956184,
+  "duration": 212914,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 46,
-  "name": "POST: Test the Demo app",
+  "line": 14,
+  "name": "GET: Test the Get Request both Pass and Fail",
   "description": "",
-  "id": "post:-automated-demo-test;post:-test-the-demo-app;;2",
+  "id": "get:-automated-get-tests;get:-test-the-get-request-both-pass-and-fail;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 34,
-      "name": "@postrequest"
+      "line": 5,
+      "name": "@getrequestpass"
     }
   ]
 });
 formatter.step({
-  "line": 36,
-  "name": "I want to set URL as \"/search-xml\" for test case \"PostRequest\"",
+  "line": 7,
+  "name": "I want to set URL as \"/search-xml\" for test case \"GetRequest Pass\"",
   "matchedColumns": [
     0,
     1
@@ -130,16 +115,16 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "line": 37,
-  "name": "I set header content type as \"multipart/form-data\"",
+  "line": 8,
+  "name": "I set header content type as \"application/xml\"",
   "matchedColumns": [
     2
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 38,
-  "name": "I hit the API with requestbody with formdata \"testdata/postRequest.txt\" and request method is \"POST\"",
+  "line": 9,
+  "name": "I hit the API with requestbody \"\" and request method is \"GET\"",
   "matchedColumns": [
     3,
     4
@@ -147,27 +132,12 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "line": 39,
+  "line": 10,
   "name": "I try to verify the status code is \"200\"",
   "matchedColumns": [
     5
   ],
   "keyword": "Then "
-});
-formatter.step({
-  "line": 40,
-  "name": "I try to verify the xml response value \"id\" is \"3\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 41,
-  "name": "I try to verify the xml response value \"to\" is \"Woking\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 42,
-  "name": "I try to verify the xml response value \"from\" is \"London\"",
-  "keyword": "And "
 });
 formatter.match({
   "arguments": [
@@ -176,44 +146,44 @@ formatter.match({
       "offset": 22
     },
     {
-      "val": "PostRequest",
+      "val": "GetRequest Pass",
       "offset": 50
     }
   ],
   "location": "StepDefinitionsTest.setAPIEndpointURL(String,String)"
 });
 formatter.result({
-  "duration": 735280297,
+  "duration": 249659730,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "multipart/form-data",
+      "val": "application/xml",
       "offset": 30
     }
   ],
   "location": "StepDefinitionsTest.setHeader(String)"
 });
 formatter.result({
-  "duration": 13471957,
+  "duration": 463335,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "testdata/postRequest.txt",
-      "offset": 46
+      "val": "",
+      "offset": 32
     },
     {
-      "val": "POST",
-      "offset": 95
+      "val": "GET",
+      "offset": 57
     }
   ],
-  "location": "StepDefinitionsTest.submitFormData(String,String)"
+  "location": "StepDefinitionsTest.submitRequest(String,String)"
 });
 formatter.result({
-  "duration": 12254342132,
+  "duration": 5923704124,
   "status": "passed"
 });
 formatter.match({
@@ -226,70 +196,19 @@ formatter.match({
   "location": "StepDefinitionsTest.verifyStatusCode(String)"
 });
 formatter.result({
-  "duration": 6657253,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "id",
-      "offset": 40
-    },
-    {
-      "val": "3",
-      "offset": 48
-    }
-  ],
-  "location": "StepDefinitionsTest.verifyXmlResponseValue(String,String)"
-});
-formatter.result({
-  "duration": 1244139779,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "to",
-      "offset": 40
-    },
-    {
-      "val": "Woking",
-      "offset": 48
-    }
-  ],
-  "location": "StepDefinitionsTest.verifyXmlResponseValue(String,String)"
-});
-formatter.result({
-  "duration": 165856648,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "from",
-      "offset": 40
-    },
-    {
-      "val": "London",
-      "offset": 50
-    }
-  ],
-  "location": "StepDefinitionsTest.verifyXmlResponseValue(String,String)"
-});
-formatter.result({
-  "duration": 60896880,
+  "duration": 2643856,
   "status": "passed"
 });
 formatter.after({
-  "duration": 2162267,
+  "duration": 48721,
   "status": "passed"
 });
 formatter.after({
-  "duration": 941013,
+  "duration": 10920,
   "status": "passed"
 });
 formatter.after({
-  "duration": 844616,
+  "duration": 11157,
   "status": "passed"
 });
 });
