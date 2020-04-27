@@ -53,8 +53,8 @@ public class StepDefinitionsTest {
 		apiEndPointUri = String.format("%s%s", apiHostName, URL);
 		testName = testCaseName;
 		Reporter.addStepLog(Status.PASS + " :: Cucumber Hostname URL is :: " + apiEndPointUri);
-		logger.info("Cucumber Hostname URL is :: " + apiEndPointUri);
-		logger.info("Cucumber Test case name is :: " + testName);
+//		logger.info("Cucumber Hostname URL is :: " + apiEndPointUri);
+//		logger.info("Cucumber Test case name is :: " + testName);
 	}
 
 	@When("^I set header content type as \"([^\"]*)\"$")
@@ -62,7 +62,7 @@ public class StepDefinitionsTest {
 		if (contentType != null && !contentType.isEmpty()) {
 			CONTENT_TYPE = contentType;
 			Reporter.addStepLog(Status.PASS + " :: content type is :: " + CONTENT_TYPE);
-			logger.info("Content type is :: " + CONTENT_TYPE);
+//			logger.info("Content type is :: " + CONTENT_TYPE);
 		} else {
 			Reporter.addStepLog(Status.FAIL + " :: content type cannot be null or empty!");
 			logger.info("Content type cannot be null or empty!");
@@ -79,7 +79,7 @@ public class StepDefinitionsTest {
 			JSONParser jsonParser = new JSONParser();
 			FILE_PATH = System.getProperty("user.dir") + "//src//test//java//com//factory//cucumber//"
 					+ requestBodyPath;
-			logger.info("Path of requestbody file is :: " + FILE_PATH);
+//			logger.info("Path of requestbody file is :: " + FILE_PATH);
 			try (FileReader reader = new FileReader(FILE_PATH)) {
 				Object obj = jsonParser.parse(reader);
 				REQUESTBODY = obj.toString();
@@ -151,7 +151,7 @@ public class StepDefinitionsTest {
 		if (statusCode.equals(String.valueOf(STATUS_CODE))) {
 			Assert.assertEquals(STATUS_CODE, statusCode);
 			Reporter.addStepLog(Status.PASS + " :: Status Code is :: " + STATUS_CODE);
-			logger.info("Status Code is :: " + STATUS_CODE);
+//			logger.info("Status Code is :: " + STATUS_CODE);
 		} else {
 			Assert.assertEquals(STATUS_CODE, statusCode);
 			Reporter.addStepLog(Status.FAIL + " :: Status Code is :: " + STATUS_CODE);
@@ -211,8 +211,8 @@ public class StepDefinitionsTest {
 	private void compareResponseValues(String expected, String actual, String responseKey) {
 		Reporter.addStepLog("Actual Value is  ::" + actual);
 		Reporter.addStepLog("Expected Value is  ::" + expected);
-		logger.info("Actual Value is  ::" + actual);
-		logger.info("Expected Value is  ::" + expected);
+//		logger.info("Actual Value is  ::" + actual);
+//		logger.info("Expected Value is  ::" + expected);
 		if (expected.equals(actual)) {
 			Assert.assertEquals(actual, expected);
 			Reporter.addStepLog(Status.PASS + " " + responseKey + " : Expected value : " + expected
